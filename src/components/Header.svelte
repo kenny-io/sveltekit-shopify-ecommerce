@@ -4,7 +4,6 @@
 	let cart;
 	onMount(() => {
 		cart = JSON.parse(localStorage.getItem('cart'));
-		console.log(cart);
 		if (cart) {
 			count = cart.lines.edges.length;
 		}

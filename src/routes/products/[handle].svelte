@@ -14,10 +14,6 @@
 	export let product;
 	export let productImage;
 	export let productVariants;
-    import { onMount} from "svelte"
-    	onMount(() => {
-			console.log(JSON.parse(localStorage.getItem('cart')));
-	});
 	let quantity = 0;
 	// @ts-ignore
 	let selectedProduct = productVariants[0].id;
@@ -33,7 +29,6 @@
 				})
 			});
 			const data = await addToCartResponse.json();
-            console.log(data);
 
 			// save cart to localStorage
 			localStorage.setItem('cartId', data.id);
