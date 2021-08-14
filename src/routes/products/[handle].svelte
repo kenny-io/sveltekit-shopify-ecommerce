@@ -30,7 +30,7 @@
 			});
 			const data = await addToCartResponse.json();
 
-			// save cart to localStorage
+			// save new cart to localStorage
 			localStorage.setItem('cartId', data.id);
 			localStorage.setItem('cart', JSON.stringify(data));
 			location.reload();
