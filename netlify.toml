@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "build/"
+  functions = "functions/"
+
+[build.environment]
+  NODE_VERSION = "12.20"
+
+
+[dev]
+  command="npm run dev"
+  publish="build" 
