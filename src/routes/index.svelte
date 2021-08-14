@@ -1,9 +1,7 @@
 <script context="module">
 	import { products, getProducts } from '../../store';
+	import ProductList from '../components/ProductList.svelte';
 
-import ProductList from '../components/ProductList.svelte';
-	// export const prerender = true;
-		
 	export async function load(ctx) {
 		const productType = ctx.page.query.get('type');
 		await getProducts();
@@ -15,13 +13,8 @@ import ProductList from '../components/ProductList.svelte';
 			});
 		}
 
-		return { props: { ProductList } };
+		return { props: {  } };
 	}
-</script>
-
-
-<script>
-export let ProductList
 </script>
 
 <svelte:head>
